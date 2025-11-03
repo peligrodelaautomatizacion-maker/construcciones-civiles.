@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amigos de la Ciencia | Colegio Técnico Nacional de Encarnación</title>
+  <style>
+    /* ==== PALETA DE COLORES VERDES ==== */
+    :root {
+      --verde-oscuro: #004d40;
+      --verde: #2e7d32;
+      --verde-claro: #81c784;
+      --fondo: #e8f5e9;
+      --blanco: #ffffff;
+      --gris: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--gris);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: var(--blanco);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--verde-claro);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 77, 64, 0.6)),
+                  url('cienciaxd.jpg') center/cover;
+      color: var(--blanco);
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero a {
+      background-color: var(--verde-claro);
+      color: var(--verde-oscuro);
+      padding: 0.8rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: var(--blanco);
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h3 {
+      color: var(--verde);
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      border-left: 5px solid var(--verde);
+      padding-left: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h4 {
+      color: var(--verde-oscuro);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--verde-claro);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        display: inline-block;
+        margin: 0.3rem 0.5rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Amigos de la Ciencia</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#expocientec">Expocientec</a>
+      <a href="#fuentes">Fuentes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Explorando el conocimiento</h2>
+    <p>Somos estudiantes del Colegio Técnico Nacional de Encarnación apasionados por la ciencia y la innovación.</p>
+    <a href="#expocientec">Descubre más</a>
+  </section>
+
+  <section id="actividades">
+    <h3>¿Quiénes somos?</h3>
+    <p>
+      <strong>Amigos de la Ciencia</strong> es un grupo estudiantil formado por jóvenes curiosos, creativos y comprometidos con el aprendizaje científico. Buscamos fomentar la investigación, la experimentación y el trabajo en equipo dentro del Colegio Técnico Nacional de Encarnación.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Investigación</h4>
+        <p>Desarrollamos proyectos experimentales en áreas como física, biología, química y tecnología aplicada.</p>
+      </div>
+      <div class="card">
+        <h4>Divulgación</h4>
+        <p>Promovemos la cultura científica en la comunidad educativa mediante charlas, demostraciones y talleres.</p>
+      </div>
+      <div class="card">
+        <h4>Trabajo en equipo</h4>
+        <p>Valoramos la cooperación, el respeto y la creatividad como pilares para construir conocimiento juntos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="expocientec">
+    <h3>Expocientec</h3>
+    <p>
+      Cada año participamos en la feria <strong>EXPOCIENTEC</strong>, organizada por el Colegio Técnico Nacional de Encarnación. En su edición 2025 la 34ª feria se realizará del 9 al 12 de septiembre en la ciudad de Encarnación. :contentReference[oaicite:2]{index=2}
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Proyectos destacados</h4>
+        <p>Desde energías renovables hasta robótica escolar, nuestros proyectos muestran el poder de la ciencia en acción. :contentReference[oaicite:3]{index=3}</p>
+      </div>
+      <div class="card">
+        <h4>Premios y logros</h4>
+        <p>La edición 2025 de EXPOCIENTEC será una plataforma donde jóvenes talentos del país presentan soluciones innovadoras. :contentReference[oaicite:4]{index=4}</p>
+      </div>
+      <div class="card">
+        <h4>Inspirando a otros</h4>
+        <p>Motivamos a nuevas generaciones de estudiantes a experimentar, preguntar y descubrir el mundo con curiosidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fuentes">
+    <h3>Fuentes y enlaces</h3>
+    <ul>
+      <li><a href="https://www.masencarnacion.com/articulo/ctn-lanza-la-34-feria-de-ciencias-expocientec-2025">CTN lanza la 34ª Feria de Ciencias – EXPOCIENTEC 2025</a> – Más Encarnación. :contentReference[oaicite:5]{index=5}</li>
+      <li><a href="https://www.masencarnacion.com/articulo/alumnos-de-colegio-tecnico-de-encarnacion-presentan-vehiculoselectricos-y-de-competicion-en-expocientec">Alumnos del Colegio Técnico de Encarnación presentan vehículos eléctricos y de competición en EXPOCIENTEC</a> – Más Encarnación. :contentReference[oaicite:6]{index=6}</li>
+      <li><a href="https://paraguay.worldplaces.me/es/review/87675760-colegio-tecnico-nacional-de-encarnacion-arq-raul-maria-benitez-perdomo.html">Colegio Técnico Nacional de Encarnación “Arq. Raúl María Benítez Perdomo” – WorldPlaces</a> – Información institucional. :contentReference[oaicite:7]{index=7}</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h3>Contacto</h3>
+    <p>+595 975 677505</p>
+    <p>+595 984 205487</p>
+    <p>
+      Si querés conocer más sobre nuestros proyectos o sumarte al grupo, escribinos a  
+      <a href="mailto:amigosdelaciencia.ctne@gmail.com">escuelaempresactnycev@gmail.com</a>.
+    </p>
+    <p>📍 Colegio Técnico Nacional de Encarnación, Paraguay</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Amigos de la Ciencia | Colegio Técnico Nacional de Encarnación</p>
+    <p>Hecho con 💚 por estudiantes apasionados por la ciencia.</p>
+  </footer>
+
+</body>
+</html>
