@@ -1,184 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amigos de la Ciencia | Colegio Técnico Nacional de Encarnación</title>
-  <style>
-    /* ==== PALETA DE COLORES VERDES ==== */
-    :root {
-      --verde-oscuro: #004d40;
-      --verde: #2e7d32;
-      --verde-claro: #81c784;
-      --fondo: #e8f5e9;
-      --blanco: #ffffff;
-      --gris: #333;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantina – Colegio Técnico Nacional "Arq. Raúl María Benítez Perdomo"</title>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
+  <style>
+    :root {
+      --primario: #0057a0;
+      --secundario: #003f70;
+      --fondo: #f4f7fa;
     }
 
     body {
-      background-color: var(--fondo);
-      color: var(--gris);
-      line-height: 1.6;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--fondo);
+      color: #333;
     }
 
     header {
-      background-color: var(--verde-oscuro);
-      color: var(--blanco);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      background: var(--primario);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
     }
 
     header h1 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      text-align: center;
+      margin: 0;
+      font-size: 2.2em;
+      line-height: 1.2;
     }
 
     nav {
-      margin-top: 0.5rem;
+      background: var(--secundario);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      gap: 10px;
     }
 
     nav a {
-      color: var(--blanco);
-      margin-left: 1rem;
+      color: white;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+      background: rgba(255,255,255,0.1);
     }
 
     nav a:hover {
-      color: var(--verde-claro);
+      background: rgba(255,255,255,0.25);
     }
 
-    .hero {
-      background: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 77, 64, 0.6)),
-                  url('cienciaxd.jpg') center/cover;
-      color: var(--blanco);
-      text-align: center;
-      padding: 5rem 1rem;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero a {
-      background-color: var(--verde-claro);
-      color: var(--verde-oscuro);
-      padding: 0.8rem 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .hero a:hover {
-      background-color: var(--blanco);
-    }
-
-    section {
-      padding: 3rem 1.5rem;
+    .contenedor {
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 25px auto;
+      background: white;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
 
-    section h3 {
-      color: var(--verde);
-      margin-bottom: 1rem;
-      font-size: 1.6rem;
-      border-left: 5px solid var(--verde);
-      padding-left: 0.5rem;
+    .contenedor img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
     }
 
-    .grid {
+    .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: var(--blanco);
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h4 {
-      color: var(--verde-oscuro);
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     footer {
-      background-color: var(--verde-oscuro);
-      color: var(--blanco);
+      background: var(--secundario);
+      color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
+      padding: 20px;
+      margin-top: 35px;
     }
 
-    footer a {
-      color: var(--verde-claro);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
+    /* OPTIMIZADO PARA CELULARES */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
       }
 
       nav {
-        margin-top: 0.5rem;
+        flex-direction: column;
       }
 
-      .hero h2 {
-        font-size: 1.6rem;
+      .contenedor {
+        margin: 15px;
+        padding: 18px;
       }
 
-      .hero p {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav a {
-        display: inline-block;
-        margin: 0.3rem 0.5rem;
-      }
-      .card {
-        padding: 1rem;
+      .galeria {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -186,93 +109,59 @@
 <body>
 
   <header>
-    <h1>Amigos de la Ciencia</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#actividades">Actividades</a>
-      <a href="#expocientec">Expocientec</a>
-      <a href="#fuentes">Fuentes</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <h1>Cantina Escolar</h1>
+    <p>Colegio Técnico Nacional y CEV "Arq. Raúl María Benítez Perdomo"</p>
   </header>
 
-  <section class="hero" id="inicio">
-    <h2>Explorando el conocimiento</h2>
-    <p>Somos estudiantes del Colegio Técnico Nacional de Encarnación apasionados por la ciencia y la innovación.</p>
-    <a href="#expocientec">Descubre más</a>
-  </section>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-  <section id="actividades">
-    <h3>¿Quiénes somos?</h3>
+  <div class="contenedor" id="inicio">
+    <h2>Bienvenidos a la Cantina Escolar</h2>
     <p>
-      <strong>Amigos de la Ciencia</strong> es un grupo estudiantil formado por jóvenes curiosos, creativos y comprometidos con el aprendizaje científico. Buscamos fomentar la investigación, la experimentación y el trabajo en equipo dentro del Colegio Técnico Nacional de Encarnación.
+      La cantina del Colegio Técnico Nacional ofrece opciones de alimentos accesibles y saludables
+      para todos los estudiantes. Es un espacio pensado para el descanso, la convivencia y el buen
+      ambiente dentro de la institución.
     </p>
+    <img src="imagen-cantina-1.jpg" alt="Cantina del colegio" />
+  </div>
 
-    <div class="grid">
-      <div class="card">
-        <h4>Investigación</h4>
-        <p>Desarrollamos proyectos experimentales en áreas como física, biología, química y tecnología aplicada.</p>
-      </div>
-      <div class="card">
-        <h4>Divulgación</h4>
-        <p>Promovemos la cultura científica en la comunidad educativa mediante charlas, demostraciones y talleres.</p>
-      </div>
-      <div class="card">
-        <h4>Trabajo en equipo</h4>
-        <p>Valoramos la cooperación, el respeto y la creatividad como pilares para construir conocimiento juntos.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="expocientec">
-    <h3>Expocientec</h3>
-    <p>
-      Cada año participamos en la feria <strong>EXPOCIENTEC</strong>, organizada por el Colegio Técnico Nacional de Encarnación. En su edición 2025 la 34ª feria se realizará del 9 al 12 de septiembre en la ciudad de Encarnación.
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h4>Proyectos destacados</h4>
-        <p>Desde energías renovables hasta robótica escolar, nuestros proyectos muestran el poder de la ciencia en acción.</p>
-      </div>
-      <div class="card">
-        <h4>Premios y logros</h4>
-        <p>La edición 2025 de EXPOCIENTEC será una plataforma donde jóvenes talentos del país presentan soluciones innovadoras.</p>
-      </div>
-      <div class="card">
-        <h4>Inspirando a otros</h4>
-        <p>Motivamos a nuevas generaciones de estudiantes a experimentar, preguntar y descubrir el mundo con curiosidad.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="fuentes">
-    <h3>Fuentes y enlaces</h3>
+  <div class="contenedor" id="menu">
+    <h2>Menú Disponible</h2>
     <ul>
-      <li><a href="https://www.masencarnacion.com/articulo/ctn-lanza-la-34-feria-de-ciencias-expocientec-2025">CTN lanza la 34ª Feria de Ciencias – EXPOCIENTEC 2025</a> – Más Encarnación.</li>
-      <li><a href="https://www.masencarnacion.com/articulo/alumnos-de-colegio-tecnico-de-encarnacion-presentan-vehiculoselectricos-y-de-competicion-en-expocientec">Alumnos del Colegio Técnico de Encarnación presentan vehículos eléctricos y de competición en EXPOCIENTEC</a> – Más Encarnación.</li>
-      <li><a href="https://paraguay.worldplaces.me/es/review/87675760-colegio-tecnico-nacional-de-encarnacion-arq-raul-maria-benitez-perdomo.html">Colegio Técnico Nacional de Encarnación “Arq. Raúl María Benítez Perdomo” – WorldPlaces</a> – Información institucional.</li>
+      <li>Almuerzos variados cada dia</li>
+      <li>Sándwiches variados</li>
+      <li>Helados variados</li>
+      <li>Empanadas y minutas</li>
+      <li>Jugos naturales y refrescos</li>
+      <li>Dulces y snacks variados</li>
     </ul>
-  </section>
+  </div>
 
-  <section id="contacto">
-    <h3>Contacto</h3>
-    <p>+595 975 677505</p>
-    <p>+595 984 205487</p>
-    <p>
-      Si querés conocer más sobre nuestros proyectos o sumarte al grupo, escribinos a  
-      <a href="mailto:amigosdelaciencia.ctne@gmail.com">escuelaempresactnycev@gmail.com</a>.
-    </p>
-    <p>📍 Colegio Técnico Nacional de Encarnación, Paraguay</p>
-  </section>
+  <div class="contenedor" id="galeria">
+    <h2>Galería de la Cantina</h2>
+    <div class="galeria">
+      <img src="imagen-cantina-2.jpg" alt="Interior de la cantina" />
+      <img src="imagen-cantina-3.jpg" alt="Mostrador de comida" />
+      <img src="imagen-cantina-4.jpg" alt="Estudiantes en la cantina" />
+    </div>
+  </div>
+
+  <div class="contenedor" id="contacto">
+    <h2>Contacto</h2>
+    <p>Para sugerencias o consultas:</p>
+    <p><strong>Telefono</strong> 0995 616618 o 0974 497952</p>
+    <p><strong>Email:</strong> escuelaempresactnycev@gmail.com</p>
+    <p><strong>Dirección:</strong> CTN "Arq. Raúl M. Benítez Perdomo", Encarnación – Itapúa</p>
+  </div>
 
   <footer>
-    <p>© 2025 Amigos de la Ciencia | Colegio Técnico Nacional de Encarnación</p>
-    <p>Hecho con 💚 por estudiantes apasionados por la ciencia.</p>
+    © 2025 Cantina Escolar – CTN "Arq. Raúl María Benítez Perdomo"
   </footer>
 
 </body>
 </html>
-
-
-
